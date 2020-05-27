@@ -179,7 +179,7 @@ ul#nav li a {
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #F06000; }
+ul#nav li.current a { color: #dd42f5; }
 
 
 /* ------------------------------------------------------------------ */
@@ -279,6 +279,35 @@ ul#nav li.current a { color: #F06000; }
 #resume .date {
    font: 15px/24px 'opensans-regular', sans-serif;
    margin-top: 6px;
+}
+
+/*----------------------------------------------*/
+/* Skill Flexbox
+/*----------------------------------------------*/
+.skills-flex-container {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+.skills-list {
+   flex-basis: 200px;
+   max-width: 200px;
+   /* flex-grow: 1; */
+   flex-shrink: 0;
+      /* https://cssgradient.io/
+      background: rgb(255,255,255);
+      background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,182,255,1) 45%, rgba(114,9,121,1) 100%);
+      background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,182,255,1) 45%, rgba(114,9,121,1) 100%);
+      background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,182,255,1) 45%, rgba(114,9,121,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#720979",GradientType=1);  */
+}
+.skills-list h1 {
+   display: table;
+   margin: auto;
+   font: 18px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   box-shadow: 0 4px 2px -2px gray;
 }
 
 /*----------------------------------------------*/
@@ -416,11 +445,19 @@ ul#nav li.current a { color: #F06000; }
    padding-bottom: 60px;
 }
 #portfolio h1 {
-   font: 15px/24px 'opensans-semibold', sans-serif;
+   font: 18px/24px 'librebaskerville-regular', sans-serif;
    text-transform: uppercase;
    letter-spacing: 1px;
    text-align: center;
    margin-bottom: 48px;
+   color: #dd42f5;
+}
+#portfolio h2 {
+   font: 15px/24px 'opensans-semibold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   text-align: center;
+   margin-bottom: 24px;
    color: #95A3A3;
 }
 
@@ -971,7 +1008,7 @@ footer .social-links li {
     margin: 0;
     padding: 0;
     margin-left: 42px;
-    color: #F06000;
+    color: #dd42f5;
 }
 
 footer .social-links li:first-child { margin-left: 0; }
