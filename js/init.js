@@ -121,7 +121,7 @@
 /*----------------------------------------------------*/
 /*	Flexslider
 /*----------------------------------------------------*/
-   $('.flexslider').flexslider({
+   $('#flexslider1').flexslider({
       namespace: "flex-",
       controlsContainer: ".flex-container",
       animation: 'slide',
@@ -132,6 +132,30 @@
       animationSpeed: 600,
       randomize: false,
    });
+
+/*----------------------------------------------------*/
+/*	Flexslider - TEST
+/* SEE: (DOCS): https://woocommerce.com/flexslider/
+/* SEE: https://jsfiddle.net/solodev/fxqLqs4a/
+/* SEE: http://flexslider.woothemes.com/index.html
+/*----------------------------------------------------*/
+$('#flexslider2').flexslider({
+   // controlsContainer: ".flexslider-test-controls-container",
+   // customDirectionNav: $(".custom-navigation a"),
+   // namespace: 'flextest-',
+   animation: 'slide',
+   controlNav: false,
+   directionNav: true,
+   // controlsContainer: '.flexslider-test-controls-container',
+   prevText: '',
+   nextText: '',
+   slideshow: false
+   // directionNav: false,
+   // smoothHeight: true,
+   // slideshowSpeed: 7000,
+   // animationSpeed: 600,
+   // randomize: false,
+});
 
 /*----------------------------------------------------*/
 /*	contact form

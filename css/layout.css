@@ -820,6 +820,29 @@ call-to-action .button {
     cursor: default;
 }
 
+/* ----- flex slider TEST ----- */
+.flexslider-test-controls-container {
+   position: relative;
+   height: auto;
+   width: 50%;
+   margin: auto;
+}
+.custom-controls-container .flex-direction-nav {
+   display: flex;
+   /* position: relative; */
+}
+.custom-controls-container .flex-prev {
+   font-size: 2em;
+   opacity: 1;
+   /* position: absolute; */
+   /* top: 0; */
+   /* bottom: 0; */
+}
+.custom-controls-container  .flex-next {
+   font-size: 2em;
+   /* position: absolute; */
+}
+
 /* ------------------------------------------------------------------ */
 /* h. Contact Section
 /* ------------------------------------------------------------------ */
