@@ -133,29 +133,79 @@
       randomize: false,
    });
 
-/*----------------------------------------------------*/
-/*	Flexslider - TEST
-/* SEE: (DOCS): https://woocommerce.com/flexslider/
-/* SEE: https://jsfiddle.net/solodev/fxqLqs4a/
-/* SEE: http://flexslider.woothemes.com/index.html
-/*----------------------------------------------------*/
-$('#flexslider2').flexslider({
-   // controlsContainer: ".flexslider-test-controls-container",
-   // customDirectionNav: $(".custom-navigation a"),
-   // namespace: 'flextest-',
-   animation: 'slide',
-   controlNav: false,
-   directionNav: true,
-   // controlsContainer: '.flexslider-test-controls-container',
-   prevText: '',
-   nextText: '',
-   slideshow: false
-   // directionNav: false,
-   // smoothHeight: true,
-   // slideshowSpeed: 7000,
-   // animationSpeed: 600,
-   // randomize: false,
-});
+   /*----------------------------------------------------*/
+   /*	Flexslider - TEST
+   /* SEE: (DOCS): https://woocommerce.com/flexslider/
+   /* SEE: https://jsfiddle.net/solodev/fxqLqs4a/
+   /* SEE: http://flexslider.woothemes.com/index.html
+   /*----------------------------------------------------*/
+   $('#flexslider2').flexslider({
+      animation: 'slide',
+      controlNav: false,
+      directionNav: true,
+      prevText: '',
+      nextText: '',
+      slideshow: false
+      // controlsContainer: ".flexslider-test-controls-container",
+      // customDirectionNav: $(".custom-navigation a"),
+      // namespace: 'flextest-',
+      // controlsContainer: '.flexslider-test-controls-container',
+      // directionNav: false,
+      // smoothHeight: true,
+      // slideshowSpeed: 7000,
+      // animationSpeed: 600,
+      // randomize: false,
+   });
+   /* --- Portfolio Modal Flexsliders --- */
+   // TODO: looping through adds last listener to all click events ?
+   // var modalIds = [
+   //    '#web-dev-modal-01',
+   //    '#web-dev-modal-02'
+   // ];
+   // for (var i = 0; i < modalIds.length; i++) {
+   //    var tgtModalId = modalIds[i];
+      
+   //    $('a[href="' + tgtModalId + '"]').click(function() {
+         
+   //       $(tgtModalId + '-flexslider').flexslider({
+   //          animation: 'slide',
+   //          controlNav: false,
+   //          directionNav: true,
+   //          prevText: '',
+   //          nextText: '',
+   //          slideshow: false
+   //          // start: function() {
+   //             // console.log('*flexslider start()');
+   //          // }
+   //       });
+   //    });
+   // }
+   $('a[href="#web-dev-modal-01"]').click(function() {
+      $('#web-dev-modal-01-flexslider').flexslider({
+         animation: 'slide',
+         controlNav: false,
+         directionNav: true,
+         prevText: '',
+         nextText: '',
+         slideshow: false,
+         start: function() {
+            console.log('*flexslider start()');
+         }
+      });
+   });
+   $('a[href="#web-dev-modal-02"]').click(function() {
+      $('#web-dev-modal-02-flexslider').flexslider({
+         animation: 'slide',
+         controlNav: false,
+         directionNav: true,
+         prevText: '',
+         nextText: '',
+         slideshow: false,
+         start: function() {
+            console.log('*flexslider start()');
+         }
+      });
+   });
 
 /*----------------------------------------------------*/
 /*	contact form
@@ -198,15 +248,7 @@ $('#flexslider2').flexslider({
 
       });
       return false;
-   });
-
+   }); 
 
 });
-
-
-
-
-
-
-
 

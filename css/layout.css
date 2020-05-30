@@ -548,12 +548,14 @@ ul#nav li.current a { color: #dd42f5; }
 	filter:alpha(opacity=100);
 }
 
-/* popup modal */
+/* GENERIC || USE FOR ILLUSTRATION(?) popup modal */
 .popup-modal {
-	max-width: 550px;
+   max-width: 550px;
+   /* max-width: 700px; */
 	background: #fff;
 	position: relative;
-	margin: 0 auto;
+   /* margin: 10px auto; */
+   margin: 0 auto;
 }
 .popup-modal .description-box { padding: 12px 36px 18px 36px; }
 .popup-modal .description-box h4 {
@@ -577,12 +579,12 @@ ul#nav li.current a { color: #dd42f5; }
 .popup-modal .description-box .categories i {
    margin-right: 8px;
 }
-.popup-modal .link-box {
+.link-box {
    padding: 18px 36px;
    background: #111;
    text-align: left;
 }
-.popup-modal .link-box a {
+.link-box a, .portfolio-modal-link-box a {
    color: #fff;
 	font: 11px/21px 'opensans-bold', sans-serif;
 	text-transform: uppercase;
@@ -590,7 +592,48 @@ ul#nav li.current a { color: #dd42f5; }
    cursor: pointer;
 }
 .popup-modal a:hover {	color: #00CCCC; }
-.popup-modal a.popup-modal-dismiss { margin-left: 24px; }
+a.popup-modal-dismiss { margin-left: 24px; }
+
+/* Portfolio popup modal  */  
+   /* Web Dev project popup modal */
+.web-dev-popup-modal {
+   max-width: 600px;
+   /* max-height: 600px; *REMOVING THIS VERTICALLY CENTERS MODAL IN VIEWPORT? */
+   background: #fff;
+   position: relative;
+   margin: 20px auto;
+   /* padding-top: 35px; */
+}
+   /* Flex Sliders */
+.portfolio-modal-wrapper {
+   max-height: 600px;
+}
+.portfolio-modal-flexslider {
+   /* position: relative; */
+   /* height: 650px;
+   width: 650px;
+   margin: auto; */
+   width: 90%;
+   /* height: 75%; */
+   height: 90%;
+   /* vertical-align: center; */
+   display: inline-block;
+   margin: 5%;
+}
+.portfolio-modal-flexslider img {
+   /* max-width: 100%; */
+   /* max-height: 90%; */
+   /* width: 100%; */
+   /* width: auto; */
+   /* max-height: 550px; */
+   /* margin: 10%; */
+}
+.portfolio-modal-link-box {
+   height: 50px;
+   padding: 10px 20px;
+   background: #111;
+   text-align: left;
+}
 
 
 /* fadein/fadeout effect for modal popup
@@ -770,6 +813,28 @@ call-to-action .button {
 .slides:after {
    clear: both;
 }
+/* ----- flex slider TEST ----- */
+.flexslider-test-controls-container {
+   position: relative;
+   height: auto;
+   width: 50%;
+   margin: auto;
+}
+.custom-controls-container .flex-direction-nav {
+   display: flex;
+   /* position: relative; */
+}
+.custom-controls-container .flex-prev {
+   font-size: 2em;
+   opacity: 1;
+   /* position: absolute; */
+   /* top: 0; */
+   /* bottom: 0; */
+}
+.custom-controls-container  .flex-next {
+   font-size: 2em;
+   /* position: absolute; */
+}
 
 /* No JavaScript Fallback */
 /* If you are not using another script, such as Modernizr, make sure you
@@ -818,29 +883,6 @@ call-to-action .button {
     background: #fff;
     background: rgba(255, 255, 255, .9);
     cursor: default;
-}
-
-/* ----- flex slider TEST ----- */
-.flexslider-test-controls-container {
-   position: relative;
-   height: auto;
-   width: 50%;
-   margin: auto;
-}
-.custom-controls-container .flex-direction-nav {
-   display: flex;
-   /* position: relative; */
-}
-.custom-controls-container .flex-prev {
-   font-size: 2em;
-   opacity: 1;
-   /* position: absolute; */
-   /* top: 0; */
-   /* bottom: 0; */
-}
-.custom-controls-container  .flex-next {
-   font-size: 2em;
-   /* position: absolute; */
 }
 
 /* ------------------------------------------------------------------ */
