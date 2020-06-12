@@ -133,30 +133,135 @@
       randomize: false,
    });
 
-/*----------------------------------------------------*/
-/*	Flexslider - TEST
-/* SEE: (DOCS): https://woocommerce.com/flexslider/
-/* SEE: https://jsfiddle.net/solodev/fxqLqs4a/
-/* SEE: http://flexslider.woothemes.com/index.html
-/*----------------------------------------------------*/
-$('#flexslider2').flexslider({
-   // controlsContainer: ".flexslider-test-controls-container",
-   // customDirectionNav: $(".custom-navigation a"),
-   // namespace: 'flextest-',
-   animation: 'slide',
-   controlNav: false,
-   directionNav: true,
-   // controlsContainer: '.flexslider-test-controls-container',
-   prevText: '',
-   nextText: '',
-   slideshow: false
-   // directionNav: false,
-   // smoothHeight: true,
-   // slideshowSpeed: 7000,
-   // animationSpeed: 600,
-   // randomize: false,
-});
-
+   /*----------------------------------------------------*/
+   /*	Flexslider - TEST
+   /* SEE: (DOCS): https://woocommerce.com/flexslider/
+   /* SEE: https://jsfiddle.net/solodev/fxqLqs4a/
+   /* SEE: http://flexslider.woothemes.com/index.html
+   /*----------------------------------------------------*/
+   $('#flexslider2').flexslider({
+      animation: 'slide',
+      controlNav: false,
+      directionNav: true,
+      prevText: '',
+      nextText: '',
+      slideshow: false
+      // controlsContainer: ".flexslider-test-controls-container",
+      // customDirectionNav: $(".custom-navigation a"),
+      // namespace: 'flextest-',
+      // controlsContainer: '.flexslider-test-controls-container',
+      // directionNav: false,
+      // smoothHeight: true,
+      // slideshowSpeed: 7000,
+      // animationSpeed: 600,
+      // randomize: false,
+   });
+   /* --- Portfolio Modal Flexsliders --- */
+   // TODO: looping through adds last listener to all click events ?
+   // var modalIds = [
+   //    '#web-dev-modal-01',
+   //    '#web-dev-modal-02'
+   // ];
+   // for (var i = 0; i < modalIds.length; i++) {
+   //    var tgtModalId = modalIds[i];
+      
+   //    $('a[href="' + tgtModalId + '"]').click(function() {
+         
+   //       $(tgtModalId + '-flexslider').flexslider({
+   //          animation: 'slide',
+   //          controlNav: false,
+   //          directionNav: true,
+   //          prevText: '',
+   //          nextText: '',
+   //          slideshow: false
+   //          // start: function() {
+   //             // console.log('*flexslider start()');
+   //          // }
+   //       });
+   //    });
+   // }
+   $('a[href="#web-dev-modal-01"]').click(function() {
+      $('#web-dev-modal-01-flexslider').flexslider({
+         animation: 'slide',
+         controlNav: false,
+         directionNav: true,
+         prevText: '',
+         nextText: '',
+         slideshow: false,
+         smoothHeight: true,
+         // itemWidth: 550, // *items overflow into window if itemWidth !== flexslider width
+         start: function(e) { 
+            // console.log('-- START --')
+            // var popupContainer = document.getElementById('web-dev-modal-01');
+            // var activeSlide = e.slides.get().find( (s) => { return s.className === 'flex-active-slide'; } );
+            // var tgtWidth = activeSlide.firstChild.naturalWidth;
+            // console.log(activeSlide.firstChild);
+            // var tgtWidthPx = tgtWidth + 'px';
+            // console.log(activeSlide);
+            // console.log('tgtWidth: ', tgtWidth);
+            // activeSlide.style.width = tgtWidthPx;
+            // popupContainer.style.width = tgtWidthPx;
+         },
+         before: function(e) {
+            // console.log('-BEFORE-')
+            // var popupContainer = document.getElementById('web-dev-modal-01');
+            // var activeSlide = e.slides.get().find( (s) => { return s.className === 'flex-active-slide'; } );
+            // var tgtWidth = activeSlide.firstChild.naturalWidth;
+            // var tgtWidthPx = tgtWidth + 'px';
+            // console.log(activeSlide);
+            // console.log('tgtWidth: ', tgtWidth);
+            // activeSlide.style.width = tgtWidthPx;
+            // popupContainer.style.width = tgtWidthPx;
+            // popupContainer.animate
+         },
+         after: function(e) { 
+            // *SEE (to dynamically change itemWidth): https://stackoverflow.com/questions/26145073/dynamically-change-the-itemwidth-of-a-flexslider
+            // console.log('-- AFTER --')
+            // var popupContainer = document.getElementById('web-dev-modal-01');
+            // var activeSlide = e.slides.get().find( (s) => { return s.className === 'flex-active-slide'; } );
+            // var tgtWidth = activeSlide.firstChild.naturalWidth;
+            // console.log(activeSlide.firstChild);
+            // var tgtWidthPx = tgtWidth + 'px';
+            // console.log(activeSlide);
+            // console.log('tgtWidth: ', tgtWidth);
+            // activeSlide.style.width = tgtWidthPx;
+            // // popupContainer.style.width = tgtWidthPx;
+         }
+      });
+   });
+   $('a[href="#web-dev-modal-02"]').click(function() {
+      $('#web-dev-modal-02-flexslider').flexslider({
+         animation: 'slide',
+         controlNav: false,
+         directionNav: true,
+         prevText: '',
+         nextText: '',
+         slideshow: false,
+         smoothHeight: true
+      });
+   });
+   $('a[href="#web-dev-modal-03"]').click(function() {
+      $('#web-dev-modal-03-flexslider').flexslider({
+         animation: 'slide',
+         controlNav: false,
+         directionNav: true,
+         prevText: '',
+         nextText: '',
+         slideshow: false,
+         smoothHeight: true
+      })
+   });
+   $('a[href="#web-dev-modal-04"]').click(function() {
+      $('#web-dev-modal-04-flexslider').flexslider({
+         animation: 'slide',
+         controlNav: false,
+         directionNav: true,
+         prevText: '',
+         nextText: '',
+         slideshow: false,
+         smoothHeight: true
+      })
+   });
 /*----------------------------------------------------*/
 /*	contact form
 ------------------------------------------------------*/
@@ -198,15 +303,7 @@ $('#flexslider2').flexslider({
 
       });
       return false;
-   });
-
+   }); 
 
 });
-
-
-
-
-
-
-
 
