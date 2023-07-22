@@ -188,9 +188,7 @@
          prevText: '',
          nextText: '',
          slideshow: false,
-         start: function() {
-            console.log('*flexslider start()');
-         }
+         smoothHeight: true
       });
    });
    $('a[href="#web-dev-modal-02"]').click(function() {
@@ -201,12 +199,31 @@
          prevText: '',
          nextText: '',
          slideshow: false,
-         start: function() {
-            console.log('*flexslider start()');
-         }
+         smoothHeight: true
       });
    });
-
+   $('a[href="#web-dev-modal-03"]').click(function() {
+      $('#web-dev-modal-03-flexslider').flexslider({
+         animation: 'slide',
+         controlNav: false,
+         directionNav: true,
+         prevText: '',
+         nextText: '',
+         slideshow: false,
+         smoothHeight: true
+      })
+   });
+   $('a[href="#web-dev-modal-04"]').click(function() {
+      $('#web-dev-modal-04-flexslider').flexslider({
+         animation: 'slide',
+         controlNav: false,
+         directionNav: true,
+         prevText: '',
+         nextText: '',
+         slideshow: false,
+         smoothHeight: true
+      })
+   });
 /*----------------------------------------------------*/
 /*	contact form
 ------------------------------------------------------*/
