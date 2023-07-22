@@ -602,14 +602,17 @@ ul#nav li.current a { color: #dd42f5; }
 /* Portfolio popup modal  */  
    /* Web Dev project popup modal */
 .web-dev-popup-modal {
-   max-width: 700px;
+   max-width: 600px;
    width: auto;
    /* width: max-content; *shows all slides in modal */
    /* width: min-content; *makes modal tiny */
    /* max-height: 600px; *REMOVING THIS VERTICALLY CENTERS MODAL IN VIEWPORT? */
-   background: #fff;
+   background: #111;
    position: relative;
    margin: 20px auto;
+}
+.web-dev-popup-modal-hh {
+   max-width: 350px; /* changed from 700px for tall HH photos - they grow super tall (off page) to adjust to width */
 }
 
 /* Flex Sliders */
